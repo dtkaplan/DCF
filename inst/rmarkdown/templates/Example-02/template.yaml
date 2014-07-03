@@ -1,0 +1,4 @@
+name: Second Example
+description: >
+ Essentially, a copy of Example 1
+create_dir: true

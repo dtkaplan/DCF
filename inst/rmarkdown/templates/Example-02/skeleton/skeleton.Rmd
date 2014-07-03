@@ -1,0 +1,10 @@
+---
+title: "My First Template"
+author: "Daniel Kaplan"
+date: "April 22, 2014"
+output: html_document
+---
+
+I want to see how this works.
+
+Can you add something underneath?

@@ -1,4 +1,4 @@
-DCFdevel
-========
+DCF-devel
+=========
 
-Development version of the R package for DCF
+Testing ideas for a package for the DCF course, esp to deliver templates.
