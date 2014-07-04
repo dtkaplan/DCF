@@ -45,6 +45,34 @@ meltCountries <- function() {
 }
 
 
+#' Turn country names into ISO 3166-1 alpha-3 codes.
+#' 
+#' ISO 3166-1 alpha 3 codes are three-letter codes for countries, as specified 
+#' by the International Standards Organization.
+#' 
+#' @param names a vector of country names
+#' 
+#' @return a corresponding vector of ISO 3166 codes.  \code{NA} when no match
+#' can be found for an element of \code{names}.
+#' 
+#' @details This function will typically be used with \code{mutate} or \code{transform}
+#' to create a column that is standard across datasets.
+#' 
+#' @examples
+#' toISO3( c("Russia","China", "Luxembourg", "Nowhere Land"))
+#' @export
+toISO3 <- function(names) {
+  df <- data.frame(Alternative=toupper(names),nameOrder=1:length(names))
+  ISO <- meltCountries()
+  ISO2 <- unique(
+    transform(ISO, ISO3=toupper(Name),
+           Alternative=toupper(Alternative)
+           ) 
+    )
+  tmp <- merge( df, ISO2, by='Alternative',all.x=TRUE)
+  return(with(tmp, ISO3[order(nameOrder)])) 
+}
+
 
 standNames <- function (data, syn, varname.x, varname.y, nonMatch = c(FALSE, TRUE)) {
   data[[varname.x]] <- toupper(data[[varname.x]])

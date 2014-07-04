@@ -6,7 +6,8 @@ Depends:
     ggplot2,
     dplyr,
     reshape2,
-    rworldmap
+    rworldmap,
+    RCurl
 Version: 1.0
 Date: 2014-04-22
 Author: Daniel Kaplan
