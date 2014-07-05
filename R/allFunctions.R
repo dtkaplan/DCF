@@ -37,7 +37,7 @@ CIAdata <- function (code=NULL) {
 meltCountries <- function() {
   data(countrySynonyms)
   syn <- countrySynonyms[-1]
-  mSyn <- melt(syn, id.vars="ISO3", measure.vars=names(syn), na.rm=TRUE)
+  mSyn <- reshape2::melt(syn, id.vars="ISO3", measure.vars=names(syn), na.rm=TRUE)
   mSyn <- mSyn[-2]
   mSyn <- subset(mSyn, value != "")
   colnames(mSyn) <- c("Name", "Alternative")
