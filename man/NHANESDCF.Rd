@@ -1,5 +1,5 @@
-\name{NHANES}
-\alias{NHANES}
+\name{NHANESDCF}
+\alias{NHANESDCF}
 \alias{smallNHANES}
 \docType{data}
 \title{
@@ -8,9 +8,9 @@ Body shape, mortality, and related measurements from NHANES 1999-2004.
 \description{
 These data were collected as part of the NHANES 1999-2004 study.
 }
-\usage{data(NHANES)}
+\usage{data(NHANESDCF)}
 \format{
-  \code{NHANES} is a data frame with 31126 observations on the following 19 variables. 
+  \code{NHANESDCF} is a data frame with 31126 observations on the following 19 variables. 
   
   \code{smallNHANES} is a random sample of 500 of the observations, intended to let people prototype graphical displays, etc.
   \describe{
@@ -35,9 +35,7 @@ These data were collected as part of the NHANES 1999-2004 study.
     \item{\code{income}}{ratio of family income to poverty threshold. 5 is ratio greater than or equal to 5}
   }
 }
-\details{
-%%  ~~ If necessary, more details than the __description__ above ~~
-}
+\details{The \code{mosaic} package has a closely related dataset, \code{NHANES}.  It differs only in the choice of variables being included.}
 \source{
 These data were assempled from NHANES 1999-2004 sources by Dr. Nir Krakauer at City College of New York.
 }
@@ -45,9 +43,9 @@ These data were assempled from NHANES 1999-2004 sources by Dr. Nir Krakauer at C
 \url{http://www.plosone.org/article/info:doi/10.1371/journal.pone.0039504}
 }
 \examples{
-data(NHANES)
-str(NHANES)
-nrow(NHANES)
+data(NHANESDCF)
+str(NHANESDCF)
+nrow(NHANESDCF)
 data(smallNHANES)
 nrow(smallNHANES)
 }
