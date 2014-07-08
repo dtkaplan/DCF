@@ -22,11 +22,11 @@ CIAdata <- function (code=NULL) {
     if (code %in% CIA$Code) {
       sub <- subset(CIA, Code==code)
       url <- (paste0("https://www.cia.gov/library/publications/the-world-factbook/rankorder/rawdata_", code, ".txt"))
-      table <- read.delim(textConnection(getURL(url)), 
+      table <- read.delim(textConnection(getURL(url, ssl.verifypeer=FALSE )), 
                           header=FALSE, stringsAsFactors=FALSE)
       table[,1]<-NULL
       names(table) <- c("country", sub[["Name"]])
-      table[[2]] = as.numeric(gsub("[^[:digit:] ]", "", table[[2]]))
+      table[[2]] = as.numeric(gsub("[^.+[:digit:] ]", "", table[[2]]))
       return(table)
     }
   }
