@@ -19,6 +19,8 @@ by the International Standards Organization.
 \details{
 This function will typically be used with \code{mutate} or \code{transform}
 to create a column that is standard across datasets.
+
+TO DO: Add in options for ISO2, num, etc.
 }
 \examples{
 toISO3( c("Russia","China", "Luxembourg", "Nowhere Land"))

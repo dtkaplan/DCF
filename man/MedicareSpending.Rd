@@ -8,7 +8,7 @@ These data, released in May 2013, describe how much hospitals charged Medicare f
 \format{
   A data frame with 163065 observations on the following 11 variables.
   \describe{
-    \item{\code{DRG.Definition}}{Direct Recovery Group description and code.  The DRG gives the procedure type.}}
+    \item{\code{DRG.Definition}}{Direct Recovery Group description and code.  The DRG gives the procedure type.}
     \item{\code{Provider.Id}}{a numeric vector}
     \item{\code{Provider.Name}}{The hospital name.}
     \item{\code{Provider.Street.Address}}{}
@@ -19,6 +19,7 @@ These data, released in May 2013, describe how much hospitals charged Medicare f
     \item{\code{Total.Discharges}}{a numeric vector}
     \item{\code{Average.Covered.Charges}}{a numeric vector}
     \item{\code{Average.Total.Payments}}{a numeric vector}
+    }
   }
 }
 \details{

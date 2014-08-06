@@ -1,0 +1,99 @@
+---
+title: "Plotting Networks with ggplot"
+author: "Daniel Kaplan"
+date: "August 4, 2014"
+output: html_document
+---
+
+```{r}
+require(DCFdevel)
+require(ggplot2)
+require(dplyr)
+require(igraph)
+```
+
+This is an attempt to provide a simple interface for drawing networks using `ggplot()`.  I'm trying to get `igraph` to do the layout, then let edge properties be set by ggplot.
+
+### An example Network
+
+These are connections among NCI60 cell types, using the correlation between probe expression.  They came from the `cellCor` data frame in `2013-08-03-DTK-103.Rmd`.
+
+```{r}
+CellEdges <- read.csv("nciNetwork.csv")
+CellEdges <- select(CellEdges, corr=correlation, one=cellLine, two=otherCellLine)
+```
+
+## Find positions for the vertices
+
+The user can hand off a dataframe `Pos` that specifies the name, x, and y position of each node.  If there is no such array, the `Edges` array will be used to extract the vertex names and assign them a position.
+
+`Pos` must have only two columns.
+
+For development purposes:
+```{r}
+SmallEdges <- head(select(CellEdges,one,two))
+SmallNet <- graph.data.frame( SmallEdges )
+```
+
+
+```{r}
+getGraphPos <- function( Edges, Pos=NULL ) {
+  JustEdges <- Edges[,c(1,2)]
+  origNames <- names(JustEdges)[1:2]
+  names(JustEdges) <- c("FROM","TO")
+  if ( is.null( Pos ) ) {
+    # Construct the locations using igraph
+    # make the graph
+    Net <- graph.data.frame( JustEdges )
+    where <- layout.fruchterman.reingold( Net )
+    Pos <- data.frame( x = where[,1], y = where[,2] )
+    Pos$name <- vertex.attributes( Net )$name
+  }
+  # add the position information to the 
+  FROM <- inner_join( JustEdges["FROM"], select(Pos,FROM=name,x,y))
+  TO <- inner_join( JustEdges["TO"], select(Pos,TO=name,xend=x,yend=y))
+  FROM$Group <- 1:nrow(FROM)
+  return( cbind(FROM,TO) )
+}
+```
+
+Trying to make a dplyr style interface.  I want to have the dataframe, then the `from` and `to` variables identified.
+
+
+Return an aes() or a geom_segment() that can be used with segments.
+```{r}
+testing <- function(.eges, from, to, 
+                    .vertices=NULL, name, x, y, 
+                    layout=layout.circle ){
+  vars <- structure(as.list(match.call()[-1]), class = "uneval")
+  if (missing(from) || missing(to))
+    stop("Must provide 'from' and 'to' variable names.")
+  From <- eval( vars$from, envir=.edges )
+  To   <- eval(   vars$to, envir=.edges )
+  Edges <- data.frame( from=From, to=To)
+  if ( !is.null(.vertices) ) {
+    if (missing(x) || missing(y))
+      stop( "Must provide 'name', 'x' and 'y' variable names for vertices.")
+    # User has specified the vertices together with x and/or y positions
+    X <- eval( vars$x, envir=.vertices )
+    Y <- eval( vars$y, envir=.vertices )
+    Names <- eval( vars$name, envir=.vertices )
+    Pos <- data.frame( from=Names, .x.start = Y, .y.start = Y )
+  } else {
+    # get the positions automatically
+    Net <- graph.data.frame( JustEdges )
+    where <- layout.fruchterman.reingold( Net )
+    Pos <- data.frame( x = where[,1], y = where[,2] )
+    Pos$name <- vertex.attributes( Net )$name
+  }
+  
+  return(Edges)
+}
+```
+
+```{r}
+vertexPosition <- function(edges) {
+  # where should the vertices be located.
+  
+  }
+```
