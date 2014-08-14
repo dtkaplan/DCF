@@ -21,7 +21,6 @@ These data, released in May 2013, describe how much hospitals charged Medicare f
     \item{\code{Average.Total.Payments}}{a numeric vector}
     }
   }
-}
 \details{
 %%  ~~ If necessary, more details than the __description__ above ~~
 }
