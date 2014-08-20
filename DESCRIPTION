@@ -7,10 +7,12 @@ Depends:
     dplyr,
     rworldmap,
     RCurl
+Suggests:
+    manipulate
 Imports:
-    reshape2
-Version: 1.0
-Date: 2014-07-04
+    tidyr
+Version: 0.5
+Date: 2014-08-19
 Author: Daniel Kaplan
 Maintainer: Daniel Kaplan <dtkaplan@gmail.com>
 Description: Holds data, class files and perhaps some software for the DCF

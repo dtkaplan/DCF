@@ -23,6 +23,21 @@ CellEdges <- read.csv("nciNetwork.csv")
 CellEdges <- select(CellEdges, corr=correlation, one=cellLine, two=otherCellLine)
 ```
 
+## What to return: functions edges and pos
+
+```{r}
+geom_graph <- function( Edges, from, to, Vertices, x=NULL,y=NULL ) {
+  
+  # Each of these will be a function that draws the 
+  # edges and vertices respectively.
+  # Use with a plain ggplot() as the base.
+  
+  geom_graph <- list( edge_geom, vertex_geom )
+  }
+```
+  
+}
+
 ## Find positions for the vertices
 
 The user can hand off a dataframe `Pos` that specifies the name, x, and y position of each node.  If there is no such array, the `Edges` array will be used to extract the vertex names and assign them a position.
@@ -31,7 +46,12 @@ The user can hand off a dataframe `Pos` that specifies the name, x, and y positi
 
 For development purposes:
 ```{r}
-SmallEdges <- head(select(CellEdges,one,two))
+SmallEdges <- head(select(CellEdges,one,two),10)
+SmallEdges <- mutate(SmallEdges,one=as.character(one), two=as.character(two))
+SmallVertices <- with(SmallEdges,data.frame( vertex.names=unique(c(one,two))))
+SmallVertices$width = 1:nrow(SmallVertices)
+SmallVertices$x <- rnorm(nrow(SmallVertices))
+SmallVertices$y <- rnorm(nrow(SmallVertices))
 SmallNet <- graph.data.frame( SmallEdges )
 ```
 
@@ -62,7 +82,7 @@ Trying to make a dplyr style interface.  I want to have the dataframe, then the 
 
 Return an aes() or a geom_segment() that can be used with segments.
 ```{r}
-testing <- function(.eges, from, to, 
+testing <- function(.edges, from, to, 
                     .vertices=NULL, name, x, y, 
                     layout=layout.circle ){
   vars <- structure(as.list(match.call()[-1]), class = "uneval")
@@ -81,13 +101,15 @@ testing <- function(.eges, from, to,
     Pos <- data.frame( from=Names, .x.start = Y, .y.start = Y )
   } else {
     # get the positions automatically
-    Net <- graph.data.frame( JustEdges )
+    Net <- graph.data.frame( Edges )
     where <- layout.fruchterman.reingold( Net )
     Pos <- data.frame( x = where[,1], y = where[,2] )
     Pos$name <- vertex.attributes( Net )$name
   }
   
-  return(Edges)
+  positionedEdges <- getGraphPos(Edges,Pos)
+  # these should become GEOMS, one for the edges, one for the nodes.
+  return(list(edges=Edges,nodes=Pos))
 }
 ```
 
