@@ -6,7 +6,8 @@ Depends:
     ggplot2,
     dplyr,
     rworldmap,
-    RCurl
+    RCurl,
+    igraph
 Suggests:
     manipulate
 Imports:

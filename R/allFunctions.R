@@ -148,7 +148,7 @@ makeMap <- function (datafile, shapefile, varname.x, varname.y, nonMatch = c(FAL
 #' @examples \dontrun{ 
 #' somedat <- CIAdata(2001) # 2001 codes for GDP
 #' p <- makeWorldMap(somedat,'country')
-#' p + geom_polygon(col="blue',aes(fill=GDP))
+#' p + geom_polygon(col="blue",aes(fill=GDP))
 #' }
 #' @export 
 makeWorldMap <- function (data, varname.x) {
