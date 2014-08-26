@@ -21,3 +21,11 @@ newNames <- c("cellLine",        "tissue",          "age",             "sex",   
 "epithelial" ,     "histology",       "source"  ,        "ploidy",          "p53",            
 "mdr",             "doublingtime")
 names(nci60cellLine) <- newNames
+
+## Put the names to have a lower case first level
+
+lowerFirst <- function( S ) {
+  substr(S, 0,1) <- tolower(substr(S,0,1))
+  return(S)
+}
+}
