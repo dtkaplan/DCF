@@ -68,6 +68,5 @@ Demographic information for most US ZIP Codes (Postal Codes)
 }
 \examples{
 data(ZipDemography)
-## maybe str(ZipDemography) ; plot(ZipDemography) ...
 }
 \keyword{datasets}

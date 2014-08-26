@@ -14,3 +14,10 @@ for (code in Codes[-1]) {
   thisVar <- CIAdata(code)
   CountryData <- merge(CountryData, thisVar, all=TRUE)
 }
+
+## NCI 60
+
+newNames <- c("cellLine",        "tissue",          "age",             "sex",             "prior.treatment",
+"epithelial" ,     "histology",       "source"  ,        "ploidy",          "p53",            
+"mdr",             "doublingtime")
+names(nci60cellLine) <- newNames
