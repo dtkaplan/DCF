@@ -26,7 +26,7 @@ CIAdata <- function (code=NULL) {
                           header=FALSE, stringsAsFactors=FALSE)
       table[,1]<-NULL
       names(table) <- c("country", sub[["Name"]])
-      table[[2]] = as.numeric(gsub("[^.+[:digit:] ]", "", table[[2]]))
+      table[[2]] = as.numeric(gsub("[^.+-[:digit:] ]", "", table[[2]]))
       return(table)
     }
   }

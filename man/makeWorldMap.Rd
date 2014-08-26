@@ -29,7 +29,7 @@ longitude data was found.
 \dontrun{
 somedat <- CIAdata(2001) # 2001 codes for GDP
 p <- makeWorldMap(somedat,'country')
-p + geom_polygon(col="blue',aes(fill=GDP))
+p + geom_polygon(col="blue",aes(fill=GDP))
 }
 }
 
