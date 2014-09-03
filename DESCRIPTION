@@ -1,4 +1,4 @@
-Package: DCFdevel
+Package: DCF
 Type: Package
 Title: Distributing materials for the DCF course
 Depends:
@@ -7,15 +7,18 @@ Depends:
     dplyr,
     rworldmap,
     RCurl,
-    igraph
+    igraph,
+    NHANES,
+    mosaicData
 Suggests:
-    manipulate
+    manipulate,
+    devtools
 Imports:
     tidyr
-Version: 0.5
-Date: 2014-08-19
+Version: 0.6
+Date: 2014-09-03
 Author: Daniel Kaplan
 Maintainer: Daniel Kaplan <dtkaplan@gmail.com>
-Description: Holds data, class files and perhaps some software for the DCF
+Description: Holds data, class files and software for the DCF
     course
-License: Do not use.  All rights reserved.
+License: Do not use outside the DCF course.  All rights reserved.

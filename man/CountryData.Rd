@@ -2,10 +2,10 @@
 \alias{CountryData}
 \docType{data}
 \title{
-%%   ~~ data name/kind ... ~~
+Many variables on countries from the CIA factbook, 2014.
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of the dataset. ~~
+The CIA Factbook has geographic, demographic, and economic data on a country-by-country basis.
 }
 \usage{data("CountryData")}
 \format{
