@@ -1,6 +1,6 @@
-\name{DCFdevel-package}
-\alias{DCFdevel-package}
-\alias{DCFdevel}
+\name{DCF-package}
+\alias{DCF-package}
+\alias{DCF}
 \docType{package}
 \title{
 Testing organization of Materials for the DCF course
@@ -10,7 +10,7 @@ This is a package to let me try out different ideas for organizing the DCF cours
 }
 \details{
 \tabular{ll}{
-Package: \tab DCFdevel\cr
+Package: \tab DCF\cr
 Type: \tab Package\cr
 Version: \tab 1.0\cr
 Date: \tab 2014-04-22\cr

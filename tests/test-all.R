@@ -1,2 +1,2 @@
 library(testthat)
-test_check("DCFdevel")
+test_check("DCF")

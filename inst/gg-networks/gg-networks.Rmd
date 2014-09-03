@@ -6,7 +6,7 @@ output: html_document
 ---
 
 ```{r}
-require(DCFdevel)
+require(DCFd)
 require(ggplot2)
 require(dplyr)
 require(igraph)

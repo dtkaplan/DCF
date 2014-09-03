@@ -1,7 +1,7 @@
 
-load(system.file("LocalData","worldshapes.rda",package="DCFdevel") )
-# world <- read.csv(system.file("LocalData","world.csv",package="DCFdevel"))
-# avg <- read.csv(system.file("LocalData/avg.csv",package="DCFdevel"))
+load(system.file("LocalData","worldshapes.rda",package="DCF") )
+# world <- read.csv(system.file("LocalData","world.csv",package="DCF"))
+# avg <- read.csv(system.file("LocalData/avg.csv",package="DCF"))
 
 
 #' Return a dataset based on the CIA World Factbook
@@ -15,7 +15,7 @@ load(system.file("LocalData","worldshapes.rda",package="DCFdevel") )
 #' @param code An optional parameter specifying the code of the desired dataset
 #' @export
 CIAdata <- function (code=NULL) {
-  CIA = read.csv(system.file("LocalData","CIA.csv",package='DCFdevel'), stringsAsFactors=FALSE)
+  CIA = read.csv(system.file("LocalData","CIA.csv",package='DCF'), stringsAsFactors=FALSE)
   if (is.null(code)) {
     return(CIA)
   } else {
