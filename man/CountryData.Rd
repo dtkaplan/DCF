@@ -5,7 +5,7 @@
 Many variables on countries from the CIA factbook, 2014.
 }
 \description{
-The CIA Factbook has geographic, demographic, and economic data on a country-by-country basis.
+The CIA Factbook has geographic, demographic, and economic data on a country-by-country basis.  In the description of the variables, the 4-digit number indicates the code used to specify that variable on the data and documentation web site.  For instance, \url{https://www.cia.gov/library/publications/the-world-factbook/fields/2153.html} contains documentation for variable code 2153, network users.
 }
 \usage{data("CountryData")}
 \format{
@@ -80,7 +80,7 @@ The CIA Factbook has geographic, demographic, and economic data on a country-by-
     \item{\code{mainlines}}{a numeric vector}
     \item{\code{cell}}{a numeric vector}
     \item{\code{netHosts}}{a numeric vector}
-    \item{\code{netUsers}}{a numeric vector}
+    \item{\code{netUsers}}{number of people who use the Internet (#) 2153}
     \item{\code{airports}}{a numeric vector}
     \item{\code{railways}}{a numeric vector}
     \item{\code{roadways}}{a numeric vector}
@@ -95,7 +95,7 @@ These data were collected using the \code{CIAdata()} function.
 THE DOCUMENTATION NEEDS COMPLETING.  See the output of \code{CIAdata() and Google "CIA Factbook NNNN"}, where NNNN is the 4-digit code used for indexing the data at the CIA.
 }
 \source{
-From the CIA World Factbook, \url{https://www.cia.gov/library/publications/the-world-factbook/}  The lines to construct the file are in inst/datafixes.R
+From the CIA World Factbook, \url{https://www.cia.gov/library/publications/the-world-factbook/}  For package maintainers: The lines to construct the file are in \code{inst/datafixes.R}.
 }
 \references{
 }

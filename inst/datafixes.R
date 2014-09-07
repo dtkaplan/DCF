@@ -8,12 +8,53 @@ names(MedicareSpending) <- c("drgDefinition", "idProvider",
 MedicareProviders <- unique( MedicareSpending[,c(2,3,4,5,6,7,8)])
 MedicareCharges <- MedicareSpending[,c(12,2,9,10,11)]
 
-Codes <- CIAdata()$Code
-CountryData <- CIAdata(Codes[1])
-for (code in Codes[-1]) {
-  thisVar <- CIAdata(code)
-  CountryData <- merge(CountryData, thisVar, all=TRUE)
+getAllCIAdata <- function() {
+    Meta <- CIAdata()
+    Codes <- Meta$Code
+    CountryData <- CIAdata(Codes[1]) %>% select(country) # just the country names
+    for (k in 1:nrow(Meta) ) {
+        thisVar <- CIAdata(Codes[k])
+        names(thisVar) <- c("country", Meta$Name[k]) 
+        CountryData <- merge(CountryData, thisVar, all=TRUE)
+    }
+    return(CountryData)
 }
+
+## Country Groups
+
+### GGG: Global Governance Group
+
+#Source: http://www.mfa.gov.sg/content/mfa/overseasmission/newyork/nyemb_statements/global_governance_group/2012/201209/press_20122809.html
+
+GGG <- data.frame( country=c("Bahamas, The", "Bahrain", "Barbados", "Botswana", "Brunei", "Chile", "Costa Rica", "Finland", 
+         "Guatemala", "Jamaica", "Kuwait", "Liechtenstein", "Luxembourg", "Malaysia", "Monaco", "Montenegro", 
+         "New Zealand", "Panama", "Peru", "Philippines", "Qatar", "Rwanda", "San Marino", "Senegal", 
+         "Singapore", "Slovenia", "Switzerland", "United Arab Emirates", "Uruguay","Vietnam"),GGG="yes" )
+
+### G20
+
+#Source: https://www.g20.org/about_g20/g20_members
+
+G20 <- data.frame(country=c("Argentina", "Australia", "Brazil", "Canada", "China", "France", "Germany", "India", "Indonesia", 
+"Italy", "Japan", "Korea, South", "Mexico", "Russia", "Saudi Arabia", "South Africa", 
+"Turkey", "United Kingdom", "United States", "European Union"),G20="yes")
+
+### G8
+
+#Source: http://en.wikipedia.org/wiki/G8
+
+G8 <- data.frame(country=c("Canada", "France", "Germany", "Italy", "Japan", "Russia", "United Kingdom", "United States"),G8="yes")
+
+## put them in one data frame with a variable for each Group.
+
+#a <- merge( select(CountryData,country),G8, all=TRUE)
+a <- merge( G8, G20, all=TRUE )
+a <- merge( a, GGG, all=TRUE)
+a <- mutate(a, 
+            G20=ifelse(is.na(G20), FALSE, TRUE),
+            G8=ifelse(is.na(G8), FALSE, TRUE),
+            GGG=ifelse(is.na(GGG), FALSE, TRUE))
+CountryGroups <- a # Then save in CountryGroups.rda
 
 ## NCI 60
 
