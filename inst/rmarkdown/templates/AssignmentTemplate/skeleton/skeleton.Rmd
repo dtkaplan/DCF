@@ -4,13 +4,14 @@ author: "Your Name Goes Here"
 output: html_document
 ---
 
-<!--  Keep this line and the following ones. -----
-      Boilerplate Section
-```{r include=FALSE,eval=FALSE}
+<!-- Boilerplate ----------------------------->
+```{r include=FALSE}
 library( DCF ) # or the package for your course.
+```
+```{r echo=FALSE,results='asis'}
 includeSourceDocuments("This file.Rmd")
 ```
----- Keep this line and the preceeding ones. -->
+<!-- Keep this line and the preceeding ones. -->
 
 ## You Can Remove This Section
 

@@ -28,7 +28,7 @@ The data were compiled from the Social Security Administration web site: \code{h
 \seealso{\code{BabyNames}}
 \references{}
 \examples{
-data(babyNames)
-str(babyNames)
+data(BabyNames)
+str(BabyNames)
 }
 \keyword{datasets}
