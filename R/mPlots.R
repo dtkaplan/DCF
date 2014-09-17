@@ -10,6 +10,7 @@
 #' @param dat Dataframe containing the variables that might be used in the plot.
 #' @return Nothing.  Just for side effects.  
 #' @export
+
 mScatter <- function(dat) {
   if(!require(manipulate)) error("Must install 'manipulate' package in RStudio.")
   df = substitute(dat)
