@@ -1,9 +1,7 @@
 \name{countryCentroids}
 \alias{countryCentroids}
 \docType{data}
-\title{
-Point locations of countries
-}
+\title{Point locations of countries}
 \description{
 Gives the latitude/longitude centroid for each country.  This is useful
 for making dot or other geom_point layers for each country.
