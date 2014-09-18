@@ -29,5 +29,3 @@ Extracted from the highly repetitive table provided by the Centers for Medicare 
 head(DirectRecoveryGroups)
 }
 \keyword{datasets}
-
-}
