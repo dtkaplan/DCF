@@ -9,11 +9,12 @@ Depends:
     rworldmap,
     RCurl,
     igraph,
-    NHANES,
-    mosaicData
 Suggests:
     manipulate,
-    devtools
+    devtools,
+    base64enc,
+    NHANES,
+    mosaicData
 Imports:
     tidyr
 Version: 0.6

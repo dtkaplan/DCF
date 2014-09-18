@@ -1,9 +1,10 @@
 \name{MedicareCharges}
+\alias{MedicareCharges}
 \docType{data}
 \title{Charges to and Payments from Medicare}
 \description{
-These data, released in May 2013, describe how much hospitals charged Medicare for various inpatient procedures, how many were performed, and how much Medicare actually paid.}
-\usage{data("MedicareSpending")}
+These data for 2011, released in May 2013, describe how much hospitals charged Medicare for various inpatient procedures, how many were performed, and how much Medicare actually paid.}
+\usage{data("MedicareCharges")}
 \format{
   A data frame with 163065 observations on the following 5 variables.
   \describe{

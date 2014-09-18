@@ -24,7 +24,7 @@ Name and location data for the medicare providers in the \code{MedicareCharges} 
 This data table is related to \code{MedicareCharges} data.
 }
 \source{
-Extracted from the highly repetitive table provided by the Centers for Medicare and Medicaid Services.  See \url{http://www.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/Medicare-Provider-Charge-Data/Inpatient.html}
+Extracted from the highly repetitive table provided by the Centers for Medicare and Medicaid Services.  See \url{http://www.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/Medicare-Provider-Charge-Data/Inpatient.html}}
 \examples{
 head(DirectRecoveryGroups)
 }
