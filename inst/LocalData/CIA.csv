@@ -40,8 +40,8 @@ Economy,Exports,exports,2078,$
 Economy,Imports,imports,2087,$
 Economy,Reserves of foreign exchange and gold,gold,2188,$
 Economy,Debt - external,externalDebt,2079,$
-Economy,Stock of direct foreign investment - at home, homeStock,2198,$
-Economy,Stock of direct foreign investment - abroad, abroadStock,2199,$
+Economy,Stock of direct foreign investment - at home,homeStock,2198,$
+Economy,Stock of direct foreign investment - abroad,abroadStock,2199,$
 Energy,Electricity - production,elecProd,2232,kWh
 Energy,Electricity - consumption,elecCons,2233,kWh
 Energy,Electricity - exports,elecExp,2234,kWh

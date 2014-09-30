@@ -34,59 +34,59 @@ The CIA Factbook has geographic, demographic, and economic data on a country-by-
     \item{\code{GDPgrowth}}{growth in GDP (\%/year), 2003}
     \item{\code{GDPcapita}}{GDP per capita ($/person), 2004}
     \item{\code{saving}}{yearly money savings (\% of GDP), 2260}
-    \item{\code{indProd}}{a numeric vector}
-    \item{\code{labor}}{a numeric vector}
-    \item{\code{unemployment}}{a numeric vector}
-    \item{\code{family}}{a numeric vector}
-    \item{\code{tax}}{a numeric vector}
-    \item{\code{budget}}{a numeric vector}
-    \item{\code{debt}}{a numeric vector}
-    \item{\code{inflation}}{a numeric vector}
-    \item{\code{discount}}{a numeric vector}
-    \item{\code{lending}}{a numeric vector}
-    \item{\code{narrow}}{a numeric vector}
-    \item{\code{broad}}{a numeric vector}
-    \item{\code{credit}}{a numeric vector}
-    \item{\code{shares}}{a numeric vector}
-    \item{\code{balance}}{a numeric vector}
-    \item{\code{exports}}{a numeric vector}
-    \item{\code{imports}}{a numeric vector}
-    \item{\code{gold}}{a numeric vector}
-    \item{\code{externalDebt}}{a numeric vector}
-    \item{\samp{ homeStock}}{a numeric vector}
-    \item{\samp{ abroadStock}}{a numeric vector}
-    \item{\code{elecProd}}{a numeric vector}
-    \item{\code{elecCons}}{a numeric vector}
-    \item{\code{elecExp}}{a numeric vector}
-    \item{\code{elecImp}}{a numeric vector}
-    \item{\code{elecCap}}{a numeric vector}
-    \item{\code{elecFossil}}{a numeric vector}
-    \item{\code{elecNuc}}{a numeric vector}
-    \item{\code{elecHydro}}{a numeric vector}
-    \item{\code{elecRenew}}{a numeric vector}
-    \item{\code{oilProd}}{a numeric vector}
-    \item{\code{oilExp}}{a numeric vector}
-    \item{\code{oilImp}}{a numeric vector}
-    \item{\code{oilRes}}{a numeric vector}
-    \item{\code{petroProd}}{a numeric vector}
-    \item{\code{petroCons}}{a numeric vector}
-    \item{\code{petroExp}}{a numeric vector}
-    \item{\code{petroImp}}{a numeric vector}
-    \item{\code{gasProd}}{a numeric vector}
-    \item{\code{gasCons}}{a numeric vector}
-    \item{\code{gasExp}}{a numeric vector}
-    \item{\code{gasImp}}{a numeric vector}
-    \item{\code{gasRes}}{a numeric vector}
-    \item{\code{mainlines}}{a numeric vector}
-    \item{\code{cell}}{a numeric vector}
-    \item{\code{netHosts}}{a numeric vector}
-    \item{\code{netUsers}}{number of people who use the Internet (#) 2153}
-    \item{\code{airports}}{a numeric vector}
-    \item{\code{railways}}{a numeric vector}
-    \item{\code{roadways}}{a numeric vector}
-    \item{\code{waterways}}{a numeric vector}
-    \item{\code{marine}}{a numeric vector}
-    \item{\code{military}}{a numeric vector}
+    \item{\code{indProd}}{Industrial production growth rate (\%), 2089}
+    \item{\code{labor}}{Labor force (people), 2095}
+    \item{\code{unemployment}}{Unemployment rate (\%), 2129}
+    \item{\code{family}}{Distribution of family income - Gini index (Gini index), 2172}
+    \item{\code{tax}}{Taxes and other revenues (\% of GDP), 2221}
+    \item{\code{budget}}{Budget surplus (+) or deficit (-) (\% of GDP), 2222}
+    \item{\code{debt}}{Public debt (\% of GDP), 2186}
+    \item{\code{inflation}}{Inflation rate (consumer prices) (\%), 2092}
+    \item{\code{discount}}{Central bank discount rate (\%), 2207}
+    \item{\code{lending}}{Commercial bank prime lending rate (\%), 2208}
+    \item{\code{narrow}}{Stock of narrow money ($), 2214}
+    \item{\code{broad}}{Stock of broad money ($), 2215}
+    \item{\code{credit}}{Stock of domestic credit ($), 2211}
+    \item{\code{shares}}{Market value of publicly traded shares ($), 2200}
+    \item{\code{balance}}{Current account balance ($), 2187}
+    \item{\code{exports}}{Exports ($), 2078}
+    \item{\code{imports}}{Imports ($), 2087}
+    \item{\code{gold}}{Reserves of foreign exchange and gold ($), 2188}
+    \item{\code{externalDebt}}{Debt - external ($), 2079}
+    \item{\code{homeStock}}{Stock of direct foreign investment - at home ($), 2198}
+    \item{\code{abroadStock}}{Stock of direct foreign investment - abroad ($), 2199}
+    \item{\code{elecProd}}{Electricity - production (kWh), 2232}
+    \item{\code{elecCons}}{Electricity - consumption (kWh), 2233}
+    \item{\code{elecExp}}{Electricity - exports (kWh), 2234}
+    \item{\code{elecImp}}{Electricity - imports (kWh), 2235}
+    \item{\code{elecCap}}{Electricity - installed generating capacity (kW), 2236}
+    \item{\code{elecFossil}}{Electricity - from fossil fuels (\% of total installed capacity), 2237}
+    \item{\code{elecNuc}}{Electricity - from nuclear fuels (\% of total installed capacity), 2239}
+    \item{\code{elecHydro}}{Electricity - from hydroelectric plants (\% of total installed capacity), 2238}
+    \item{\code{elecRenew}}{Electricity - from other renewable sources (\% of total installed capacity), 2240}
+    \item{\code{oilProd}}{Crude oil - production (bbl/day), 2241}
+    \item{\code{oilExp}}{Crude oil - exports (bbl/day), 2242}
+    \item{\code{oilImp}}{Crude oil - imports (bbl/day), 2243}
+    \item{\code{oilRes}}{Crude oil - proved reserves (bbl), 2244}
+    \item{\code{petroProd}}{Refined petroleum products - production (bbl/day), 2245}
+    \item{\code{petroCons}}{Refined petroleum products - consumption (bbl/day), 2246}
+    \item{\code{petroExp}}{Refined petroleum products - exports (bbl/day), 2247}
+    \item{\code{petroImp}}{Refined petroleum products - imports (bbl/day), 2248}
+    \item{\code{gasProd}}{Natural gas - production (cu M), 2249}
+    \item{\code{gasCons}}{Natural gas - consumption (cu M), 2250}
+    \item{\code{gasExp}}{Natural gas - exports (cu M), 2251}
+    \item{\code{gasImp}}{Natural gas - imports (cu M), 2252}
+    \item{\code{gasRes}}{Natural gas - proved reserves (cu M), 2253}
+    \item{\code{mainlines}}{Telephones - main lines in use (mainlines in use), 2150}
+    \item{\code{cell}}{Telephones - mobile cellular (cellphones), 2151}
+    \item{\code{netHosts}}{Internet hosts (#), 2184}
+    \item{\code{netUsers}}{Internet users (#), 2153}
+    \item{\code{airports}}{Airports (#), 2053}
+    \item{\code{railways}}{Railways (km), 2121}
+    \item{\code{roadways}}{Roadways (km), 2085}
+    \item{\code{waterways}}{Waterways (km), 2093}
+    \item{\code{marine}}{Merchant marine (# of ships), 2108}
+    \item{\code{military}}{Military expenditures (\% of GDP), 2034}
   }
 }
 \details{
