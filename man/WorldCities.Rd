@@ -9,16 +9,16 @@ A list of cities
 \format{
   A data frame with 23018 observations on the following 10 variables.
   \describe{
-    \item{\code{Code}}{The ISO (?) city code}
-    \item{\code{Name}}{Name of the city}
-    \item{\code{Latitude}}{location in degrees}
-    \item{\code{Longitude}}{location in degrees}
-    \item{\code{Country}}{Two letter country code}
-    \item{\code{CountryRegion}}{A numerical region}
-    \item{\code{Population}}{Population}
-    \item{\code{RegionCode}}{ISO (?) Code}
-    \item{\code{Region}}{Name of the region}
-    \item{\code{Date}}{Date estimate made}
+    \item{\code{code}}{The ISO (?) city code}
+    \item{\code{name}}{Name of the city}
+    \item{\code{latitude}}{location in degrees}
+    \item{\code{longitude}}{location in degrees}
+    \item{\code{country}}{Two letter country code}
+    \item{\code{countryRegion}}{A numerical region}
+    \item{\code{population}}{Population}
+    \item{\code{regionCode}}{ISO (?) Code}
+    \item{\code{region}}{Name of the region}
+    \item{\code{date}}{Date estimate made}
   }
 }
 \source{
