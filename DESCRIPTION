@@ -3,17 +3,17 @@ Type: Package
 Title: Distributing materials for the DCF course
 Depends:
     R (>= 3.0.0),
+    dplyr,
+    ggplot2,
+    NHANES,
+    mosaicData
 Suggests:
     manipulate,
     devtools,
-    base64enc,
-    NHANES,
-    mosaicData
+    base64enc
 Imports:
     tidyr,
-    ggplot2,
     base64enc,
-    dplyr,
     rworldmap,
     RCurl,
     igraph,
