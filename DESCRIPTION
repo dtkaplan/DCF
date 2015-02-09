@@ -6,14 +6,13 @@ Depends:
     dplyr,
     ggplot2,
     NHANES,
-    mosaicData
+    mosaicData,
+    tidyr
 Suggests:
     manipulate,
     devtools,
     base64enc
 Imports:
-    tidyr,
-    base64enc,
     rworldmap,
     RCurl,
     igraph,
