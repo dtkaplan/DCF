@@ -8,9 +8,12 @@
 #'
 #' @rdname representativeCases
 #' @param .df data frame from which to select rows
-#' @param n number of rows to return
+#' @param n number of rows to return 
 #' @param seed a random seed to use for the random parts of the algorithm.
 #' If you want another result, change the seed.
+#' 
+#' @examples 
+#' representativeCases(BabyNames, n=6)
 #' @export
 representativeCases <- function( .df, n=5L, seed=15 ) {
   if ( !inherits( .df, c("data.frame", "tbl","tbl_df")) )
@@ -39,8 +42,7 @@ representativeCases <- function( .df, n=5L, seed=15 ) {
   nUniqueVals <- unlist( lapply( .df, function(x) length(unique) ) )
   colOrder <- order( -nUniqueVals )
   Surviving <- .df
-  # Loop over the columns
-  print( names(Surviving)[colOrder])
+  # Loop over the surviving columns
   for( col in colOrder ) {
     var <- Surviving[,col]
     keepInds <- !duplicated( var )
