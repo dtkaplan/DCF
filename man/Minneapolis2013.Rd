@@ -5,7 +5,7 @@
 \description{The choices marked on each (valid) ballot for the election, which was run using a rank-choice, instant runoff system.}
 \usage{data("Minneapolis2013")}
 \format{
-  A data frame with 80101 observations on the following 5 variables.
+  A data frame with 80101 observations on the following 5 variables. All are stored as character strings.
   \describe{
     \item{\code{Precinct}}{Precincts are sub-divisions within Wards}
     \item{\code{First}}{The voter's first choice}

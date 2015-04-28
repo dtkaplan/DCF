@@ -70,3 +70,14 @@ lowerFirst <- function( S ) {
   return(S)
 }
 }
+
+
+# for converting factors to character strings in an entire data frame
+
+convert_factor_to_character <- function(data) {
+  kinds <- lapply(data, class)
+  for (k in 1:length(kinds)) {
+    if(kinds[k] == "factor") data[k] <- as.character(data[[k]])
+  }
+  return(data)
+}

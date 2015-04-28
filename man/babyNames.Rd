@@ -14,10 +14,10 @@ The US Social Security Administration provides yearly lists of names given to ba
 \format{
   \code{BabyNames} consists of 1,792,091 entries, each of which has four variables:
   \describe{
-    \item{\code{name}}{The name (as a factor)}
-    \item{\code{sex}}{F or M}
-    \item{\code{count}}{The number of babies given that name and of that sex.}
-    \item{\code{year}}{Year of birth}
+    \item{\code{name}}{The given name (character string)}
+    \item{\code{sex}}{F or M (character string)}
+    \item{\code{count}}{The number of babies given that name and of that sex. (integer)}
+    \item{\code{year}}{Year of birth (integer)}
   }
 }
 \details{

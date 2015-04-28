@@ -21,4 +21,7 @@ be included.  This function takes a sample from a dataframe, arranging things so
 as many distinct levels as possible of each value for each variable
 are kept.  The incoming random seed will be restored when the function exits.
 }
+\examples{
+representativeCases(BabyNames, n=6)
+}
 
