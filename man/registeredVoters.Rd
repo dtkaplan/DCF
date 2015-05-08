@@ -1,5 +1,5 @@
-\name{registeredVoters}
-\alias{registeredVoters}
+\name{RegisteredVoters}
+\alias{RegisteredVoters}
 \docType{data}
 \title{
 A sample of the voter registration list for Wake County, North Carolina in Fall 2010.
@@ -33,6 +33,6 @@ The full data set, containing 583,092 records, is available at \url{http://www.m
 \references{ 
 }
 \examples{
-data(registeredVoters)
+data(RegisteredVoters)
 }
 \keyword{datasets}
