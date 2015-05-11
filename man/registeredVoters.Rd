@@ -7,7 +7,7 @@ A sample of the voter registration list for Wake County, North Carolina in Fall 
 \description{
 
 }
-\usage{data(registeredVoters)}
+\usage{data(RegisteredVoters)}
 \format{
   A data frame with 10000 rows.
   \describe{
