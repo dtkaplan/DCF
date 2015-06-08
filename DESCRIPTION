@@ -5,7 +5,6 @@ Depends:
     R (>= 3.0.0),
     dplyr,
     ggplot2,
-    NHANES,
     mosaicData,
     tidyr
 Suggests:
@@ -17,7 +16,7 @@ Imports:
     RCurl,
     igraph,
     shiny
-Version: 0.7
+Version: 0.8
 Date: 2014-09-03
 Author: Daniel Kaplan
 Maintainer: Daniel Kaplan <dtkaplan@gmail.com>
