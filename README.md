@@ -1,4 +1,4 @@
-DCF-devel
+DCF
 =========
 
-Testing ideas for a package for the DCF course, esp to deliver templates.
+Datasets and functions for working with the book *Data Computing*.
